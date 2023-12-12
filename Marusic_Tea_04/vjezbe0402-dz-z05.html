@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="registracijaForma">
+      <p> Unesite registraciju </p>
+        <input type="text" id="regOzn" />
+        <button type="button" onclick="provjera()">Validacija</button>
+    </form>
+    <script>
+    function provjera() {
+        var rg = document.getElementById("regOzn").value;
+        console.log(rg);
+        if (
+        (rg[0] >= 'A' && rg[0] <= 'Z') &&
+        (rg[1] >= '0' && rg[1] <= '9') &&
+        (rg[2] >= '0' && rg[2] <= '9') &&
+        rg[3] === ' ' &&
+        (rg[4] >= 'A' && rg[4] <= 'Z') &&
+        rg[5] === ' ' &&
+        (rg[6] >= '0' && rg[6]<= '9') &&
+        (rg[7] >= '0' && rg[7]<= '9') &&
+        (rg[8] >= '0' && rg[8]<= '9') 
+      ) {
+        alert("Ispravna registracija");
+    } else {
+            alert("Neispravna registracija");  
+    }}
+    </script>
+</body>
+</html>

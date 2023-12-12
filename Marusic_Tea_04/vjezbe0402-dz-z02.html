@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="promjeni();">Promjeni pozadinu</button>
+    <p id="prvo"></p>
+    <script>
+function promjeni(){
+    var boja = Math.floor(Math.random()*16777215).toString(16);
+    document.body.style.backgroundColor="#" + boja;
+    document.getElementById("prvo").innerHTML="Boja je #"+ boja;
+}
+    </script>
+</body>
+</html>

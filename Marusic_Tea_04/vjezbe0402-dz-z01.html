@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+  var inputString = prompt("Unesite brojeve odvojene zarezom");
+var brojevi = inputString.split(',').map(Number);
+var suma = 0;
+var brojac = 0;
+var umnozak=1;
+
+
+for (let i = 0; i < brojevi.length; i++) {
+    if (!isNaN(brojevi[i])) { 
+        suma += brojevi[i];
+        brojac++;
+        umnozak=umnozak*brojevi[i];
+}}
+var aritmetickaSredina = suma / brojac;
+document.write("Uneseni brojevi: " + brojevi +"</br>" );
+document.write("Aritmeticka sredina je: " + aritmetickaSredina+ "</br>");
+var geometrijska =Math.pow(umnozak,1/brojac);
+document.write("Geometrijska sredina: " + geometrijska );
+</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    p,input{
+        display: inline-block;
+        font-size: 15px;
+    }
+    button{
+        margin: 20px;
+        border-radius: 6px;
+        width: 80px;
+    }
+    hr{
+      align-items: center;
+        margin: 0px;
+        width: 220px;
+    }
+    </style>
+</head>
+<body>
+
+    <p>x= </p> <input id="prvibroj" type="text" />
+    </br>
+   <p>y=</p><input id="drugibroj" type="text"/>
+</br>
+    <button id="buton" type="submit">Zbroji</button>
+</br>
+<hr>
+</br>
+REZULTAT: <input id="rezz" type="text">
+<script>
+    document.getElementById('buton').addEventListener('click', function(){
+var a=parseInt(document.getElementById("prvibroj").value);
+var b=parseInt(document.getElementById("drugibroj").value);
+document.getElementById("rezz").value=a+b;});
+</script>
+</body>
+</html>

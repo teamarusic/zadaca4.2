@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p, input {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <input id="prvibr" type="text"> <p>operand 1</p>
+    <br>
+    <input id="drugibr" type="text"><p>operand 2</p>
+    <br>
+    <input type="button" id="zbroj1" value="+" onclick="izvrsiOperaciju('+');"/>
+    <input type="button" value="-" onclick="izvrsiOperaciju('-');"/>
+    <input type="button" value="*" onclick="izvrsiOperaciju('*');"/>
+    <input type="button" value="/" onclick="izvrsiOperaciju('/');"/>
+    <br>
+    <input type="button" value="sin" onclick="izvrsiOperaciju('sin');"/>
+    <input type="button" value="cos" onclick="izvrsiOperaciju('cos');"/>
+    <input type="button" value="tan" onclick="izvrsiOperaciju('tan');"/>
+    <br>
+    <input type="button" value="ln" onclick="izvrsiOperaciju('ln');"/>
+    <input type="button" value="log" onclick="izvrsiOperaciju('log');"/>
+    <br>
+    <input type="button" value="^2" onclick="izvrsiOperaciju('kvadrat');"/>
+    <input type="button" value="^3" onclick="izvrsiOperaciju('kub');"/>
+    <input type="button" value="^n" onclick="izvrsiOperaciju('prviop_na_drugi');"/>
+</br>
+<script>
+function izvrsiOperaciju(operator) {
+    var x = parseFloat(document.getElementById("prvibr").value);
+    var y = parseFloat(document.getElementById("drugibr").value);
+    var rezz;
+
+switch (operator) {
+    case '+':
+        rezz = x + y;
+        break;
+    case '-':
+        rezz = x - y;
+        break;
+    case '*':
+        rezz = x * y;
+        break;
+    case '/':
+        rezz = x / y;
+        break;
+    case 'sin':
+    x = x * (Math.PI / 180);
+        rezz = Math.sin(x);
+        break;
+    case 'cos':
+    x = x * (Math.PI / 180);
+        rezz = Math.cos(x);
+        break;
+    case 'tan':
+    x = x * (Math.PI / 180);
+        rezz = Math.tan(x);
+        break;
+     case 'ln':
+        rezz = Math.log(x);
+         break;
+    case 'log':
+        rezz = Math.log(x) / Math.log(y); 
+        break;
+        case 'kvadrat':
+            rezz = Math.pow(x, 2);
+            break;
+        case 'kub':
+            rezz = Math.pow(x, 3);
+            break;
+        case 'prviop_na_drugi':
+            rezz = Math.pow(x, y);
+            break;
+    default:
+        alert('Nepoznat operator.');
+        return;
+}
+
+    alert("Rezultat: " + rezz);
+}
+</script>
+</body>
+</html>

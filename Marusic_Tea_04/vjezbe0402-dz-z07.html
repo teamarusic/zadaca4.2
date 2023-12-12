@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p, input{
+display: inline-block;
+        }
+        input{
+            box-shadow: 2px 2px 6px black;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <p>Unesite dan(01-31) </p> <input id="prvo"type="text">
+        <br>
+        <p>Unesite mjesec(01-12) </p> <input id="drugo" type="text">
+        <br>
+        <p>Unesite godinu(npr. 1909) </p><input id="trece" type="text">
+        <br>
+        <input type="button" value="Izracunaj" onclick="myfn();" >
+    </form>
+<script>
+   function myfn(){
+        var x=document.getElementById("prvo").value.padStart(2,'0');
+        var y=document.getElementById("drugo").value.padStart(2,'0');
+        var z=document.getElementById("trece").value;
+        var trenutnaGodina = new Date().getFullYear();
+        var trenutniMjesec = new Date().getMonth() + 1;
+        var trenutniDatum = new Date().getDate();
+        var god=trenutnaGodina-z;
+        if (y>trenutniMjesec || (y === trenutniMjesec && x > trenutniDatum)) {
+                god--;
+            }
+            alert("Imate " +god+ " godina.");
+        }
+</script>
+</body>
+</html>

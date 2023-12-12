@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <form id="ocjenaForma">
+      <p>Unesite ocjenu</p>
+        <input type="text" id="prvo" onkeydown="ispisi(event);" />
+    </form>
+    <script>
+        function ispisi(event) {
+        
+                var ocj = document.getElementById("prvo").value;
+                var ocjena = parseInt(ocj);
+                 if(ocjena===1){
+                alert("Ocjena je "+ ocjena +" -nedovoljan.");
+                 }
+                 if(ocjena===2){
+                alert("Ocjena je "+ ocjena +" -dovoljan.");
+                 }
+                 if(ocjena===3){
+                alert("Ocjena je "+ ocjena +" -dobar.");
+                 }
+                 if(ocjena===4){
+                alert("Ocjena je "+ ocjena +" -vrlo dobar.");
+                 }
+                 if(ocjena===5){
+                alert("Ocjena je "+ ocjena +" -odlican.");
+                 }
+            }
+    </script>
+</body>
+</html>

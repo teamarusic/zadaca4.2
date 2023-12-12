@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dokument</title>
+</head>
+<body>
+    <img id="lampaugasena" src="zarulja_off_2.png">
+    <img id="prekidacugasen" src="off-removebg-preview.png" onclick="zamjeni()">
+    
+    <script>
+        function zamjeni() {
+            var lampaugasena = document.getElementById("lampaugasena");
+            var prekidacugasen = document.getElementById("prekidacugasen");
+
+            if (prekidacugasen.src.includes("off")) {
+                prekidacugasen.src = "on-removebg-preview.png";
+                lampaugasena.src = "zarulja_on_2.png";
+            } else {
+                prekidacugasen.src = "off-removebg-preview.png";
+                lampaugasena.src = "zarulja_off_2.png";
+            }
+        }
+    </script>
+</body>
+</html>
